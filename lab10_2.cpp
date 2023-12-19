@@ -4,20 +4,19 @@
 using namespace std;
 
 int main (){
-    ifstream source;
-    ofstream dest;
-    source.open("cheerbook.txt");
-    dest.open("cheerbook_copy.txt");
-    
-    string textline;
+	ifstream source;
+	ofstream dest;
+	source.open("cheerbook.txt");
+	dest.open("cheerbook_copy.txt");
+	
+	string textline;
     dest << "-------------------- BOOM ---------------------\n";
     while(getline(source,textline)){
         dest << textline << "\n" ;
     }
     dest << "-------------------- HA!! ---------------------";
 
-
     source.close();
     dest.close();
-    return 0;
+	return 0;
 }
